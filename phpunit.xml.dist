@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit colors="true"
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+    beStrictAboutTestsThatDoNotTestAnything="true"
+    checkForUnintentionallyCoveredCode="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTestSize="true"
+    beStrictAboutChangesToGlobalState="true"
+    stopOnFailure="false"
+    bootstrap="vendor/autoload.php"
+>
+  <testsuites>
+    <testsuite name="Tests">
+      <directory suffix="Test.php">./tests/phpunit</directory>
+    </testsuite>
+  </testsuites>
+
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">./src</directory>
+    </whitelist>
+  </filter>
+
+  <logging>
+    <log type="coverage-html" target="./reports/coverage" lowUpperBound="10" highLowerBound="65"/>
+    <log type="coverage-xml" target="./reports/coverage.xml"/>
+    <log type="coverage-clover" target="./reports/clover.xml"/>
+    <log type="coverage-text" target="./reports/coverage.txt"/>
+  </logging>
+</phpunit>

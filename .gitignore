@@ -1,0 +1,5 @@
+/.php-version
+/composer.lock
+/phpunit.xml
+/reports
+/vendor
